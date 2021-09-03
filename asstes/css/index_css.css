@@ -14,9 +14,11 @@ body{
     font-size: 20px;
 	font-style: italic;
 	background-color: black;
+	border: 2px solid gray;
+    border-radius: 10px;
 	color: greenyellow;
-	border-left: 6px yellow dotted;
-	border-bottom: 6px yellow dotted;
+	/* border-left: 6px yellow dotted;
+	border-bottom: 6px yellow dotted; */
 	padding: 8px;
 	text-align: center;
 	margin: 15px;

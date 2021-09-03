@@ -15,13 +15,15 @@ body{
  
     font-size: 20px;
 	background-color: black;
+    border: 2px solid gray;
+    border-radius: 10px;
 	color: greenyellow;
 	padding: 8px;
 	text-align: center;
 	margin: 15px;
     text-decoration: none;
-    border-left: 6px yellow dotted;
-	border-bottom: 6px yellow dotted;
+    /* border-left: 6px yellow dotted;
+	border-bottom: 6px yellow dotted; */
 
   }
 
@@ -60,12 +62,12 @@ body{
 .button_1 {
     font-size: 20px;
 	background-color: black;
+    border: 2px solid gray;
+    border-radius: 10px;
 	color: greenyellow;
 	padding: 8px;
-	text-align: center;
-	margin: 15px;
     text-decoration: none;
-    border-bottom: 6px yellow dotted;
+    /* border-bottom: 6px yellow dotted; */
   }
 
 
