@@ -2,6 +2,44 @@ body{
     /* background-color: gray; */
     background-image: url("../img/health_care_01.jpg");
     background-repeat: no-repeat;
+    margin-top: 0px;
     
     /* background-attachment: fixed; */
 }
+
+.fullbox{
+    text-align: center;
+    background-color: rgb(4, 71, 126);
+    border: rgb(3, 3, 66) solid 5px;
+    margin-left: 23%;
+    margin-right: 23%;
+    border-radius: 10px;
+    padding: 5px;
+    
+}
+
+.innerbox{
+    color: black;
+    border: rgb(3, 3, 66) solid 5px;
+    border-radius: 10px;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.part1{
+    
+    padding: 25px;
+    font-size: 50px;
+   
+}
+.part2{
+    padding: 5px;
+    font-size: 30px;
+    
+}
+.part3{
+    padding: 5px;
+    font-size: 25px;
+}
+
