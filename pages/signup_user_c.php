@@ -14,8 +14,7 @@ if(isset($_POST['register'])){
     $user_district       = $_POST['dist'];
     $user_street         = $_POST['street'];
     
-
-	// echo"$user_email";
+    
 
 	if($user_l_name == ''){
 		echo "<script>alert('Please enter your last name')</script>";
