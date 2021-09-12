@@ -1,3 +1,11 @@
+<?php
+session_start();
+if(!isset($_SESSION['email'])){
+  header("Location: ./login.html");
+  // echo"<script>window.open('../index.php','_self') </script>";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,24 +24,7 @@
 
      <!-- tr>td*5
        ul>li*5 -->
-   <table border = "1">
-       <caption><div class="table_title">Doctor Details List</div></b></caption>
-       <tr>
-           <th>Name</th>
-           <th>ID</th>
-           <th>Phone</th>
-           <th>Location</th>
-           <th>Speciality</th>
-           <th>Time</th>
-       </tr>
-       <tr>
-           <td>Dr.Rahul Dev</td>
-           <td>1</td>
-           <td>01963258974</td>
-           <td>Dhaka</td>
-           <td></td>
-       </tr>
-    </table>
+       <h3><a href="logout.php">LOG OUT</a></h3>
 
 </body>
 </html>

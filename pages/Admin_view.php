@@ -1,3 +1,11 @@
+<?php
+session_start();
+if(!isset($_SESSION['email'])){
+  header("Location: ./login_admin.html");
+  // echo"<script>window.open('./admin_login','_self') </script>";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,5 +18,8 @@
     <div class="fullbox">
         <div class="innerbox"> <div class="part1"><b> Online Health Care Service </b></div> </div>
     </div>
+
+    <br><br>
+    <h3><a href="logout.php">LOG OUT</a></h3>
 </body>
 </html>
