@@ -19,14 +19,21 @@ if(isset($_POST['login'])){
 		exit();
 	}
 
+	
+
+	// $find_name = "select first_name from admin where email = '$admin_email'   And password = '$admin_pass'";
+	// $run_query = mysqli_query($conn,$find_name);
+	// $row = mysqli_fetch_assoc($run_query); 
+	
 	$check_admin = "select * from admin where email = '$admin_email'   And password = '$admin_pass'";
 	$query = mysqli_query($conn, $check_admin);
 
 	if(mysqli_num_rows($query)){
 		session_start();
 		$_SESSION['email'] = $admin_email;
-		echo"<script>window.open('./Admin_view.php','_self') </script>";
-	}
+		echo"<script>window.open('./Admin_view.php?','_self') </script>";
+	}								
+	
 	else{
 			echo "<script>alert('Your name or password is wrong!!!!')</script>";
 			echo"<script>window.open('./login_admin.html','_self') </script>";

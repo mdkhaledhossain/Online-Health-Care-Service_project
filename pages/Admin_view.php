@@ -4,6 +4,7 @@ if(!isset($_SESSION['email'])){
   header("Location: ./login_admin.html");
   // echo"<script>window.open('./admin_login','_self') </script>";
 }
+
 ?>
 
 
@@ -18,13 +19,15 @@ if(!isset($_SESSION['email'])){
 
     <style>
         table {
-            background-color: rgb(4, 71, 126);
+            background-color:  #ffffff ;
+            border-radius: 10px;
         }
         .table_header_1{
             font-weight: bold;
             font-size: 30px;
-            color: black;
-            background-color:  gray;
+            color: black  ;
+            background-color:    #9fbbc1  ;
+            border-radius: 10px;
         }
     </style>
 
@@ -35,21 +38,24 @@ if(!isset($_SESSION['email'])){
     </div>
 
     <!-- <div class= "welcome">Welcome <?php echo $_SESSION['email']?> </div>  -->
+    
 
      <h1> <p style= "text-align: center;
-    background-color: rgb(4, 71, 126);
+    background-color:   #905f09 ;
     border: rgb(3, 3, 66) solid 5px;
     margin-left: 23%;
     margin-right: 23%;
     border-radius: 10px;
-    padding: 5px;">  Welcome <?php echo $_SESSION['email']?>  </p> </h1>
+    padding: 5px;">  Welcome <?php echo $_SESSION['email'] ?>  </p> </h1>
+
+    
 
   
 
 
-
+        <hr><hr><br><br>
       <table border = "1" align = "center">
-        <caption><div class = "table_header_1">All Users Info</div></caption>
+        <caption><div class = "table_header_1">Users Info Table</div></caption>
         <thead>
           <tr>
             <th>User ID</th>
@@ -109,7 +115,7 @@ if(!isset($_SESSION['email'])){
 
 
 
-
+      <br><br><br>
    <center><button><h3><a href="logout.php"> <p style = "text-decoration: none; color: green">LOG OUT</p></a></h3></button></center>
    
 </body>
