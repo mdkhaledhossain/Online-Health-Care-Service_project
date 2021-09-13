@@ -96,7 +96,7 @@ if(!isset($_SESSION['email'])){
                  <td><?php echo $user_district ; ?></td>
                  <td><?php echo $user_street; ?></td>
 
-                 <td><a href="./edit.php?id=<?=$user_id;?>">Edit</a>
+                 <td><a href="./edit.php?id=<?=$user_id;?>"><button>Edit</button></a>
                     <a href="./delete.php?id=<?=$user_id;?>"><button onclick="return confirm('Are you sure');">Delete</button></a>
                  </td>
             </tr>
