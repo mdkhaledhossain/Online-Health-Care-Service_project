@@ -25,12 +25,12 @@ $row = mysqli_fetch_assoc($get_user);
 </head>
 <body>
 
+
         <?php $_SESSION['email'] = $row['email'];?>
 
-    <form action="./update.php?id=<?=$row['id'];?>" method = "post">
+        <center><h1>User Form Edit Here </h1></center>
 
-    <center><h1>User Form Edit Here </h1></center>
-
+    <form action="./update_user_form.php?id=<?=$row['id'];?>" method = "post">
     <div id = "edit_form">
     User First Name : <input type="text" name="first_name" value = "<?=$row['first_name'];?>"><br><br>
     User Last Name : <input type="text" name="last_name" value = "<?=$row['last_name'];?>"><br><br>

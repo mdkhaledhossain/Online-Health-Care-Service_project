@@ -15,9 +15,12 @@ if(!isset($_SESSION['email'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Admin view</title>
-    <link rel="stylesheet" href="../asstes/css/Admin_view_css.css">
+    <link rel="stylesheet" href="../asstes/css/admin_view_css.css">
 
     <style>
+      body{
+        background-color: darkcyan;
+      }
         table {
             background-color:  #ffffff ;
             border-radius: 10px;
@@ -102,8 +105,8 @@ if(!isset($_SESSION['email'])){
                  <td><?php echo $user_district ; ?></td>
                  <td><?php echo $user_street; ?></td>
 
-                 <td><a href="./edit.php?id=<?=$user_id;?>"><button>Edit</button></a>
-                    <a href="./delete.php?id=<?=$user_id;?>"><button onclick="return confirm('Are you sure');">Delete</button></a>
+                 <td><a href="./edit_user_form.php?id=<?=$user_id;?>"><button>Edit</button></a>
+                    <a href="./delete_user.php?id=<?=$user_id;?>"><button onclick="return confirm('Are you sure');">Delete</button></a>
                  </td>
             </tr>
 
@@ -111,7 +114,7 @@ if(!isset($_SESSION['email'])){
         }
         ?>
 
-    </table>
+    </table><br><hr><hr>
 
 
 
