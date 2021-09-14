@@ -119,7 +119,7 @@ if(!isset($_SESSION['email'])){
 
 
       <br><br><br>
-   <center><button><h3><a href="logout.php"> <p style = "text-decoration: none; color: green">LOG OUT</p></a></h3></button></center>
+      <center><a href="logout.php" class="button_1">LOG OUT</a></center>
    
 </body>
 </html>
