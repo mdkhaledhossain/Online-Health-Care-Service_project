@@ -3,7 +3,7 @@ body{
     background-color: darkcyan;
 
 }
-#edit_form{
+.edit_form{
     
     text-align: center;
     font-size: 20px;

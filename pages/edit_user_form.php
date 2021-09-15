@@ -21,17 +21,17 @@ $row = mysqli_fetch_assoc($get_user);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update_form</title>
-    <link rel="stylesheet" href="../asstes/css/edit_user_form.css">
+    <link rel="stylesheet" href="../asstes/css/edit_form.css">
 </head>
 <body>
 
 
         <?php $_SESSION['email'] = $row['email'];?>
 
-        <center><h1>User Form Edit Here </h1></center>
+        <center><h1>User Edit Here </h1></center>
 
     <form action="./update_user_form.php?id=<?=$row['id'];?>" method = "post">
-    <div id = "edit_form">
+    <div class = "edit_form">
     User First Name : <input type="text" name="first_name" value = "<?=$row['first_name'];?>"><br><br>
     User Last Name : <input type="text" name="last_name" value = "<?=$row['last_name'];?>"><br><br>
     Age : <input type="text" name="age" value = "<?=$row['age'];?>">

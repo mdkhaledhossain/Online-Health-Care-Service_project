@@ -37,11 +37,8 @@ if(!isset($_SESSION['email'])){
 </head>
 <body>
     <div class="fullbox">
-        <div class="innerbox"> <div class="part1"><b> Online Health Care Service </b></div> </div>
+        <div class="innerbox"> <div class="part1"><b> Online Health Care Service. <br> Admin Page</b></div> </div>
     </div>
-
-    <!-- <div class= "welcome">Welcome <?php echo $_SESSION['email']?> </div>  -->
-    
 
      <h1> <p style= "text-align: center;
     background-color:   #905f09 ;
@@ -54,7 +51,7 @@ if(!isset($_SESSION['email'])){
     
 
   
-
+            <!-- !!!!!!!!!>>>>> User Info Table Start Here <<<<<<<!!!!!!!!! -->
 
         <hr><hr><br><br>
       <table border = "1" align = "center">
@@ -114,7 +111,68 @@ if(!isset($_SESSION['email'])){
         }
         ?>
 
-    </table><br><hr><hr>
+    </table><br><hr><hr><br><br>
+
+
+         <!-- !!!!!!!!!>>>>> User Info Table End Here <<<<<<<!!!!!!!!! -->
+
+         <!-- !!!!!!!!!>>>>> Worker Info Table End Here <<<<<<<!!!!!!!!! -->
+
+         <table border = "1" align = "center">
+        <caption><div class = "table_header_1">Worker Info Table</div></caption>
+        <thead>
+          <tr>
+            <th>Worker_ID</th>
+            <th>Full_Name</th>
+            <th>Type</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Phone</th>
+            <th>Division</th>
+            <th>Salary</th>
+          </tr>
+        </thead>
+
+        <?php 
+        // include('./connection.php');
+        $view_worker_query = "select * from workers";
+        $run = mysqli_query($conn, $view_worker_query);
+        while ($row = mysqli_fetch_array($run)){
+            $worker_id = $row[0];
+            $worker_full_name = $row[1];
+            $worker_type = $row[2];
+            $worker_age = $row[3];
+            $worker_gender = $row[4];
+            $worker_phone = $row[5];
+            $worker_division = $row[6];
+            $worker_salary = $row[7];
+
+        ?>
+
+            <tr>
+                                                         <!-- <td><?= $user_id; ?></td> -->
+                 <td><?php echo $worker_id; ?></td>                                           
+                 <td><?php echo $worker_full_name; ?></td>
+                 <td><?php echo $worker_type; ?></td>
+                 <td><?php echo $worker_age; ?></td>
+                 <td><?php echo $worker_gender; ?></td>
+                 <td><?php echo $worker_phone; ?></td>
+                 <td><?php echo $worker_division; ?></td>
+                 <td><?php echo $worker_salary; ?></td>
+
+                 <td>
+                    <a href="./edit_worker_form.php?id=<?=$worker_id;?>"><button>Edit</button></a>
+                    <a href="./delete_worker.php?id=<?=$worker_id;?>"><button onclick="return confirm('Are you sure');">Delete</button></a>
+                 </td>
+            </tr>
+
+        <?php     
+        }
+        ?>
+
+    </table><br><hr><hr><br><br>
+
+
 
 
 
