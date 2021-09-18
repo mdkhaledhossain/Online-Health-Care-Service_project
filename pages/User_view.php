@@ -33,7 +33,7 @@ if(!isset($_SESSION['email'])){
         Click Here!! And View Our SERVICES
     </div>
     <div class="inner_box1">
-       <a href="" class="link">Private Nurse Service</a> 
+       <a href="./User_view_nurse.php" class="link">Private Nurse Service</a> 
     </div>
     <div class="inner_box1">
        <a href="" class="link">Oxygen Service</a> 
