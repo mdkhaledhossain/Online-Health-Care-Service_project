@@ -36,16 +36,13 @@ if(!isset($_SESSION['email'])){
        <a href="./User_view_nurse.php" class="link">Private Nurse Service</a> 
     </div>
     <div class="inner_box1">
-       <a href="" class="link">Oxygen Service</a> 
+       <a href="./User_view_oxygen.php" class="link">Oxygen Service</a> 
     </div>
     <div class="inner_box1">
-       <a href="" class="link">Emergency Blood Service</a> 
+       <a href="./user_view_blood.php" class="link">Emergency Blood Service</a> 
     </div>
     <div class="inner_box1">
-       <a href="" class="link"> Emergency Medicine Service</a>
-    </div>
-    <div class="inner_box1">
-       <a href="" class="link">Doctor Info</a> 
+       <a href="user_view_doctor.php" class="link">Doctor Info</a> 
     </div>  
 </div>
 </center>
