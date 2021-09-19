@@ -1,0 +1,16 @@
+body{
+    background-color: darkcyan;
+}
+
+
+table {
+    background-color:  #ffffff ;
+    border-radius: 10px;
+}
+.table_header_1{
+    font-weight: bold;
+    font-size: 30px;
+    color: black  ;
+    background-color:    #9fbbc1  ;
+    border-radius: 10px;
+}

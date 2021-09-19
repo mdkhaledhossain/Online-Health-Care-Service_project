@@ -157,7 +157,8 @@ if(!isset($_SESSION['email'])){
 
          <center><div>
         <input type="text" name="live_search_2" id="live_search_2" autocomplete="off"
-          placeholder="Search worker...">
+          placeholder="Search worker..."><br>
+          <a href="./worker_summary.php">Worker Summary</a>
         </div><br></center>
 
          <table border = "1" align = "center">
