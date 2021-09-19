@@ -14,9 +14,14 @@
         <div class="innerbox"> <div class="part2">Welcome to our platform</div> </div>
         <div class="innerbox"> <div class="part3">Here You can Find Private Nurse</div> </div>
     </div>
-    <br><hr><hr>
+    <br><hr><hr><br>
 
-<table border = "1" align = "center">
+    <center><div>
+        <input type="text" name="live_search_1" id="live_search_1" autocomplete="off"
+          placeholder="Search nurse...">
+        </div><br></center>
+
+    <table border = "1" align = "center">
         <caption><div class = "table_header_1">Nurse Info Table</div></caption>
         <thead>
           <tr>
@@ -30,6 +35,7 @@
           </tr>
         </thead>
 
+        <tbody id="tmp_1">
         <?php 
          include('./connection.php');
         $view_nurse_query = "SELECT full_name, age, gender,phone,division, cost_per_day,cost_per_month FROM workers JOIN nurses on workers.id = nurses.worker_id;";
@@ -61,9 +67,41 @@
         }
         ?>
 
+        </tbody>
+        <tbody id="search_result_1"></tbody>
+
     </table><br><hr><hr><br><br>
 
 
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#live_search_1").keyup(function () {
+                var query = $(this).val();
+                if (query != "") {
+                  $(document).click(function(data) {
+                      $("#tmp_1").hide();
+                    });
+                    $.ajax({
+                        url: 'live_search_nurse.php',
+                        method: 'POST',
+                        data: {
+                            query: query
+                        },
+                        success: function (data) {
+
+                            $('#tmp_1').html("");
+                            $('#search_result_1').html(data);
+
+
+
+                        }
+                    });
+                } else {
+                   $('#tmp_1').css('display', 'none');
+                }
+            });
+        });
+    </script>
 
 
 </body>

@@ -13,6 +13,7 @@ if(!isset($_SESSION['email'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Admin view</title>
     <link rel="stylesheet" href="../asstes/css/admin_view_css.css">
@@ -48,12 +49,15 @@ if(!isset($_SESSION['email'])){
     border-radius: 10px;
     padding: 5px;">  Welcome <?php echo $_SESSION['email'] ?>  </p> </h1>
 
-    
-
-  
+     
             <!-- !!!!!!!!!>>>>> User Info Table Start Here <<<<<<<!!!!!!!!! -->
 
-        <hr><hr><br><br>
+        <hr><hr>
+        <center><div>
+        <input type="text" name="live_search_1" id="live_search_1" autocomplete="off"
+          placeholder="Search user...">
+        </div><br></center>
+
       <table border = "1" align = "center">
         <caption><div class = "table_header_1">Users Info Table</div></caption>
         <thead>
@@ -71,6 +75,7 @@ if(!isset($_SESSION['email'])){
           </tr>
         </thead>
 
+        <tbody id="tmp_1">
         <?php 
         include('./connection.php');
         $view_user_query = "select * from users";
@@ -102,7 +107,8 @@ if(!isset($_SESSION['email'])){
                  <td><?php echo $user_district ; ?></td>
                  <td><?php echo $user_street; ?></td>
 
-                 <td><a href="./edit_user_form.php?id=<?=$user_id;?>"><button>Edit</button></a>
+                 <td><a href="./edit_user_form.php?id=<?=$user_id;?>"><button>Edit</button></a></td>
+                 <td>
                     <a href="./delete_user.php?id=<?=$user_id;?>"><button onclick="return confirm('Are you sure');">Delete</button></a>
                  </td>
             </tr>
@@ -110,13 +116,50 @@ if(!isset($_SESSION['email'])){
         <?php     
         }
         ?>
+        </tbody>
+        <tbody id="search_result_1"></tbody>
 
     </table><br><hr><hr><br><br>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#live_search_1").keyup(function () {
+                var query = $(this).val();
+                if (query != "") {
+                  $(document).click(function(data) {
+                      $("#tmp_1").hide();
+                    });
+                    $.ajax({
+                        url: 'live_search_user.php',
+                        method: 'POST',
+                        data: {
+                            query: query
+                        },
+                        success: function (data) {
+
+                            $('#tmp_1').html("");
+                            $('#search_result_1').html(data);
+
+
+
+                        }
+                    });
+                } else {
+                   $('#tmp_1').css('display', 'none');
+                }
+            });
+        });
+    </script>
 
 
          <!-- !!!!!!!!!>>>>> User Info Table End Here <<<<<<<!!!!!!!!! -->
 
          <!-- !!!!!!!!!>>>>> Worker Info Table End Here <<<<<<<!!!!!!!!! -->
+
+         <center><div>
+        <input type="text" name="live_search_2" id="live_search_2" autocomplete="off"
+          placeholder="Search worker...">
+        </div><br></center>
 
          <table border = "1" align = "center">
         <caption><div class = "table_header_1">Worker Info Table</div></caption>
@@ -133,6 +176,7 @@ if(!isset($_SESSION['email'])){
           </tr>
         </thead>
 
+        <tbody id="tmp_2">
         <?php 
         // include('./connection.php');
         $view_worker_query = "select * from workers";
@@ -161,7 +205,8 @@ if(!isset($_SESSION['email'])){
                  <td><?php echo $worker_salary; ?></td>
 
                  <td>
-                    <a href="./edit_worker_form.php?id=<?=$worker_id;?>"><button>Edit</button></a>
+                    <a href="./edit_worker_form.php?id=<?=$worker_id;?>"><button>Edit</button></a></td>
+                  <td>  
                     <a href="./delete_worker.php?id=<?=$worker_id;?>"><button onclick="return confirm('Are you sure');">Delete</button></a>
                  </td>
             </tr>
@@ -170,10 +215,43 @@ if(!isset($_SESSION['email'])){
         }
         ?>
 
+        </tbody>
+        <tbody id="search_result_2"></tbody>
+
     </table><br><hr><hr><br><br>
 
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#live_search_2").keyup(function () {
+                var query = $(this).val();
+                if (query != "") {
+                  $(document).click(function(data) {
+                      $("#tmp_2").hide();
+                    });
+                    $.ajax({
+                        url: 'live_search_worker.php',
+                        method: 'POST',
+                        data: {
+                            query: query
+                        },
+                        success: function (data) {
+
+                            $('#tmp_2').html("");
+                            $('#search_result_2').html(data);
 
 
+
+                        }
+                    });
+                } else {
+                   $('#tmp_2').css('display', 'none');
+                }
+            });
+        });
+    </script>
+
+
+                <!-- !!!!!!!!!>>>>> User Info Table End Here <<<<<<<!!!!!!!!! -->
 
 
       <br><br><br>
