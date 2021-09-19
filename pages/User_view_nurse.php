@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../asstes/css/user_view_nurse_css.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Nurses</title>
 </head>
 <body>
@@ -18,7 +19,7 @@
 
     <center><div>
         <input type="text" name="live_search_1" id="live_search_1" autocomplete="off"
-          placeholder="Search nurse...">
+          placeholder="Search Division...">
         </div><br></center>
 
     <table border = "1" align = "center">

@@ -4,7 +4,7 @@
   if (isset($_POST['query'])) {
     $q = $_POST['query'];
     //   $query = "SELECT * FROM users WHERE first_name LIKE '$q%' LIMIT 100";
-      $query = "SELECT full_name, age, gender,phone,division, cost_per_day,cost_per_month FROM workers JOIN nurses on workers.id = nurses.worker_id WHERE full_name LIKE '$q%' LIMIT 100";
+      $query = "SELECT full_name, age, gender,phone,division, cost_per_day,cost_per_month FROM workers JOIN nurses on workers.id = nurses.worker_id WHERE division LIKE '$q%' LIMIT 100";
       $result = mysqli_query($conn, $query);
 
     if (mysqli_num_rows($result) > 0) {
