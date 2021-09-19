@@ -39,7 +39,7 @@ if(!isset($_SESSION['email'])){
     <div class="fullbox">
         <div class="innerbox"> <div class="part1"><b> Online Health Care Service. <br> Admin Page</b></div> </div>
     </div>
-
+    
      <h1> <p style= "text-align: center;
     background-color:   #905f09 ;
     border: rgb(3, 3, 66) solid 5px;
@@ -50,6 +50,8 @@ if(!isset($_SESSION['email'])){
 
      
             <!-- !!!!!!!!!>>>>> User Info Table Start Here <<<<<<<!!!!!!!!! -->
+
+        <div><a href="./delete_history.php" class= 'button_1'>Delete History</a></div>
 
         <hr><hr>
         <center><div>
@@ -218,7 +220,7 @@ if(!isset($_SESSION['email'])){
         </tbody>
         <tbody id="search_result_2"></tbody>
 
-    </table><br><hr><hr><br><br>
+    </table><br><hr><hr><br>
 
     <script type="text/javascript">
         $(document).ready(function () {
@@ -254,8 +256,7 @@ if(!isset($_SESSION['email'])){
                 <!-- !!!!!!!!!>>>>> User Info Table End Here <<<<<<<!!!!!!!!! -->
 
 
-      <br><br><br>
-      <center><a href="logout.php" class="button_1">LOG OUT</a></center>
+      <center><a href="logout.php" class="button_1">LOG OUT</a></center><br><br>
    
 </body>
 </html>
