@@ -51,7 +51,7 @@ if(!isset($_SESSION['email'])){
      
             <!-- !!!!!!!!!>>>>> User Info Table Start Here <<<<<<<!!!!!!!!! -->
 
-        <div><a href="./delete_history.php" class= 'button_1'>Delete History</a></div>
+        <div><a href="./delete_history.php" class= 'button_1'>View Delete History</a></div>
 
         <hr><hr>
         <center><div>
