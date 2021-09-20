@@ -2,6 +2,7 @@ body{
     /* background-color: gray; */
     background-image: url("../img/health_care_01.jpg");
     background-repeat: no-repeat;
+	margin: 0;
     
     /* background-attachment: fixed; */
 }
@@ -55,5 +56,15 @@ body{
 	border: 2px solid gray;
     border-radius: 10px;
 	font-size: 20px;
+
+}
+
+.buttom_line{
+
+	background-color: black;
+	text-align: center;
+	color: rgb(135, 165, 4);
+	padding-top: 10px;
+	margin: 0;
 
 }
